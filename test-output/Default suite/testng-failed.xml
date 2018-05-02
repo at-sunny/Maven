@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.actitime.tests.InvalidLoginTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testInvalidLogin"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- com.actitime.tests.InvalidLoginTest -->
+      <class name="com.actitime.tests.VerifyBuildNumberTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="postCondition"/>
+          <include name="testVerifyBuild"/>
+        </methods>
+      </class> <!-- com.actitime.tests.VerifyBuildNumberTest -->
+      <class name="com.actitime.tests.OpenCompletedTask">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testOpenCompletedTaskTest"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- com.actitime.tests.OpenCompletedTask -->
+      <class name="com.actitime.tests.ValidLoginLogoutTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testvalidLoginLogout"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- com.actitime.tests.ValidLoginLogoutTest -->
+      <class name="com.actitime.tests.VerifyActitimeVersionTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testVerifyVersion"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- com.actitime.tests.VerifyActitimeVersionTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

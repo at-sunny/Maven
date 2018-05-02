@@ -19,21 +19,23 @@ public abstract class BaseTest implements IAutoConstant {
 	
 	@Parameters({"nodeurl","browser","appurl"})
 	@BeforeMethod
-	public void preCondition(String nodeurl,String browser,String appurl) throws MalformedURLException {
-//		System.setProperty(chrome_key,chrome_value);
-//		System.setProperty(gecko_key, gecko_value);
-//		driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//	    driver.get("http://localhost/login.do");
-		
-		URL url = new URL(nodeurl);
-		DesiredCapabilities dc = new DesiredCapabilities();
-		dc.setBrowserName(browser);
-		driver = new RemoteWebDriver(url,dc);
+	//public void preCondition(String nodeurl,String browser,String appurl) throws MalformedURLException {
+	public void preCondition() 
+	{
+		System.setProperty(chrome_key,chrome_value);
+		System.setProperty(gecko_key, gecko_value);
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(appurl);
+	    driver.get("http://localhost/login.do");
+		
+//		URL url = new URL(nodeurl);
+//		DesiredCapabilities dc = new DesiredCapabilities();
+//		dc.setBrowserName(browser);
+//		driver = new RemoteWebDriver(url,dc);
+//		driver.manage().window().maximize();
+//	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.get(appurl);
 	}
 	
 	
